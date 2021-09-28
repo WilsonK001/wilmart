@@ -1,0 +1,21 @@
+<div class="d-flex align-items-center">
+<h2 class="h3 mb-3 fw-normal">Carts</h2>
+<%= link_to 'New Cart', new_cart_path, class: "btn btn-lg btn-outline-primary ms-auto btn-sm px-3" %>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carts.each do |cart| %>
+      <tr>
+        <td><%= link_to 'Show', cart, class: "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_cart_path(cart), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

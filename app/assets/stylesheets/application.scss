@@ -1,0 +1,373 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+
+// Following styles are added in addition with bootstrap css styling for better aesthetics
+body {
+   background-color: #F4F5F6;
+   font-family: 'Lato', sans-serif;
+//    font-family: 'Merriweather', sans-serif;
+   font-size: 14px;
+}
+
+// Styles for the view folder - "layouts"
+.nav-logo {
+   height: auto;
+   width: 130px;
+   border-radius: 6px;
+//    border: 1px solid #fff;
+   margin: 0 0;
+}
+h2, .title{
+	font-family: 'Merriweather', sans-serif;
+}
+header{
+	font:bold 1rem 'Lato', sans-serif;
+	box-shadow: #0000002b 0px 0px 8px;
+	.nav a {
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+.box-shadow-custom {
+    box-shadow: #0000003b 0px 0px 5px;
+}
+// Styles for the view folder - "home" 244 × 244 px
+.custom-card {
+	border-radius: 7px;
+	box-shadow: #00000036 0px 0px 3px;
+	padding:1rem; 
+	
+}
+.card-title{
+	font-family: 'Lato', sans-serif;
+}
+.custom-card-body{
+	h6{
+		font-family: 'Merriweather', sans-serif;
+		min-height: 3rem;
+	}
+}
+.custom-card-image {
+   border-radius: 10px 10px 0 0;
+	width: 100%;
+   max-width: 500px;
+   max-height: 250px;
+}
+.product-links{
+	.btn{
+		font:14px 'Lato', sans-serif ;
+	}
+}
+// Styles for the view folder - "carts"
+.cart-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+	flex-wrap: wrap;
+	border-radius: 7px;
+	box-shadow: #0000003b 0px 0px 5px;
+	&:first-child{
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+	}
+}
+
+.cart-item-image {
+   max-width: 120px;
+	max-height: 100px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 4px;
+}
+
+// Styles for the view folder - "devise"
+.form-signin {
+   max-width: 500px;
+}
+
+// Styles for the view folder - "line_items"
+.line-item-details {
+	background-color: #fff;
+	padding: 2rem;
+	margin: 3rem 0;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 4px;
+}
+.list-group{
+	flex-direction: initial;
+}
+.line-item-image {
+   width: 128px;
+   height: 128px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 4px;
+   border-radius: 20px;
+}
+
+.line-item-card {
+   display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #ddd;
+	padding: 8px 0;
+	
+}
+
+.line-item-card:last-of-type {
+	border-bottom: none;
+}
+
+// Styles for the view folder - "products"
+.product-page-top {
+	display: flex;
+   width: 100%;
+   margin-bottom: 40px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product-page-image {
+   border-radius: 8px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 4px;
+   max-width: 100%;
+//    max-height: 300px;
+//    flex-basis: 350px;
+//    flex-grow: 1;
+}
+
+.product-page-card {
+//    border-radius: 10px;
+	// box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//    padding: 20px;
+// 	max-width: 250px;
+// 	min-width: 150px;
+//    height: max-content;
+//    flex-basis: 250px;
+//    flex-grow: 1;
+}
+
+.product-page-details {
+	background-color: #fff;
+	padding: 15px;
+	margin: 3rem 0;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-page-card-item {
+	display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+	border-bottom: 1px solid #ddd;
+	padding: .6rem 0;
+	font-weight: bold;
+}
+
+.product-page-card-item:last-of-type {
+	border-bottom: none;
+}
+
+.product-page-title {
+   margin: 10px 0;
+   width: 100%;
+   padding-bottom: .7rem;
+   font-weight: bold;
+   border-bottom: 1px solid #ddd;
+}
+
+// Rating star styling
+.rating-stars {
+   color: #5E17EB;
+}
+.actions{
+	input[type="submit"]{
+		background-color: #fff;
+		border: 1px solid #0a58ca;
+		font-size: 14px;
+		padding: .5rem 1rem;
+		border-radius: .3rem;
+		color: #0144a5;
+	}
+}
+.total-area{
+	flex-direction: column-reverse;
+    align-items: end;
+}
+.edit-form{
+	.form-floating{
+		margin-bottom: .8rem;
+	}
+}
+.detail-page{
+	.list-group{
+		flex-direction: column;
+	}
+}
+.checkout-btn{
+	.button_to{
+		width: 100%;
+	}
+}
+
+
+// // Custom bootstrap variables must be set or imported *before* bootstrap.
+// @import "bootstrap";
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+// // Following styles are added in addition with bootstrap css styling for better aesthetics
+// body {
+//    background-color: #F4F5F6;
+//    font-family: 'Merriweather', sans-serif;
+// }
+
+// // Styles for the view folder - "layouts"
+// .nav-logo {
+//    height: 45px;
+//    width: 150px;
+//    border-radius: 10px;
+//    border: 1px solid #fff;
+//    margin: 0 20px;
+// }
+
+// .nav a {
+//    color: #fff;
+   
+// }
+
+// // Styles for the view folder - "home" 244 × 244 px
+// .custom-card {
+	
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-between;
+// 	border-radius: 10px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// 	flex-basis: 220px;
+// 	max-width: 240px;
+// 	flex-grow: 1;
+// }
+
+// .custom-card-image {
+//    border-radius: 10px 10px 0 0;
+// 	width: 100%;
+//    max-width: 500px;
+//    max-height: 250px;
+// }
+
+// // Styles for the view folder - "carts"
+// .cart-list {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: space-between;
+// 	width: 100%;
+// 	position: relative;
+// 	flex-wrap: wrap;
+// 	border-radius: 20px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// }
+
+// .cart-item-image {
+//    max-width: 120px;
+// 	max-height: 100px;
+// 	border-radius: 10px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// }
+
+// // Styles for the view folder - "devise"
+// .form-signin {
+//    max-width: 500px;
+// }
+
+// // Styles for the view folder - "line_items"
+// .line-item-details {
+// 	background-color: #fff;
+// 	padding: 2rem;
+// 	margin: 3rem 0;
+// 	border-radius: 10px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// }
+
+// .line-item-image {
+//    width: 128px;
+//    height: 128px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//    border-radius: 20px;
+// }
+
+// .line-item-card {
+//    display: flex;
+// 	flex-direction: column;
+// 	border-bottom: 1px solid #ccc;
+// 	padding: 8px 0;
+// }
+
+// .line-item-card:last-of-type {
+// 	border-bottom: none;
+// }
+
+// // Styles for the view folder - "products"
+// .product-page-top {
+// 	display: flex;
+//    width: 100%;
+//    margin-bottom: 40px;
+// 	justify-content: space-between;
+// 	align-items: center;
+// }
+
+// .product-page-image {
+//    border-radius: 10px;
+//    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//    max-width: 350px;
+//    max-height: 300px;
+//    flex-basis: 350px;
+//    flex-grow: 1;
+// }
+
+// .product-page-card {
+//    border-radius: 10px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//    padding: 20px;
+// 	max-width: 250px;
+// 	min-width: 150px;
+//    height: max-content;
+//    flex-basis: 250px;
+//    flex-grow: 1;
+// }
+
+// .product-page-details {
+// 	background-color: #fff;
+// 	padding: 15px;
+// 	margin: 3rem 0;
+// 	border-radius: 10px;
+// 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// }
+
+// .product-page-card-item {
+// 	display: flex;
+//    justify-content: space-between;
+//    flex-wrap: wrap;
+// 	border-bottom: 1px solid #ccc;
+// 	padding: 8px 0;
+// }
+
+// .product-page-card-item:last-of-type {
+// 	border-bottom: none;
+// }
+
+// .product-page-title {
+//    margin: 10px 0;
+//    width: 100%;
+//    text-align: center;
+//    font-size: 18px;
+//    font-weight: bold;
+//    border-bottom: 1px solid #999;
+// }
+
+// // Rating star styling
+// .rating-stars {
+//    color: #5E17EB;
+// }

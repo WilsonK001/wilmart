@@ -1,0 +1,32 @@
+<% if @cart.line_items.length > 0 %>
+   <div class="d-flex justify-content-end py-1 mt-4">
+      <%= link_to 'Keep Shopping', products_path,  class: 'btn btn-outline-primary' %>
+   </div>
+   <hr />
+
+   <div  class="list-group row mt-4">
+      <div class="col-md-8">
+         <% @cart.line_items.each do |line_item| %>
+         <div class="list-group-item cart-list p-3 mb-3">
+            <%= image_tag line_item.product.image, class: "cart-item-image" if line_item.product.present? && line_item.product.image.present?%>
+            <%= line_item.product.name %>
+         </div>
+         <% end %>
+      </div>
+      <div class="col-md-4">
+         <div class="list-group-item cart-list total-area p-3">
+            <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-link text-danger btn-sm" %>
+            <div class="checkout-btn w-100 my-3">
+               <%= button_to  'Checkout Cart', create_order_carts_path(id: @cart.id), method: :post, data: { confirm: "Are you sure? " }, class: "btn w-100 btn-primary" %>
+            </div>
+
+            <h4 class="title is-4 d-flex w-100 justify-content-between">
+               <span class="f5 text-muted">Total:</span> <%= number_to_currency(@cart.total_price) %>
+            </h4>
+         </div>
+      </div>
+   </div>
+<% else %>
+   <h2>Your cart is empty. </h2>
+   <%= link_to 'Start Shopping', products_path,  class: 'btn btn-warning' %>
+<% end %>

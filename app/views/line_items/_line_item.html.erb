@@ -1,0 +1,21 @@
+<div class="d-flex flex-column align-items-center">
+   <div class="row justify-content-between">
+      <figure class="col-6 line-item-image">
+         <%= link_to root_path do%>
+            <%= image_tag(line_item.product.image_url) %>
+            <% end %>
+      </figure>
+
+      <div class="col-3 line-item-card">
+         <p>Quantity: <%= line_item.quantity %></p>
+         <p>Total Price: <%= number_to_currency(line_item.total_price) %></p>
+         <%= button_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-warning" %>
+      </div>
+   </div>
+
+   <div class="line-item-details">
+      <h3><%= line_item.product.title %></h3>
+      <p><%= line_item.product.description %></p>
+   </div>
+</div>
+

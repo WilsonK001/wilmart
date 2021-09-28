@@ -1,0 +1,29 @@
+<div class="form-signin text-center mx-auto mt-4">
+   <%= form_with(model: line_item) do |form| %>
+      <% if line_item.errors.any? %>
+         <div id="error_explanation">
+            <h2><%= pluralize(line_item.errors.count, "error") %> prohibited this line_item from being saved:</h2>
+
+            <ul>
+            <% line_item.errors.each do |error| %>
+               <li class="text-warning"><%= error.full_message %></li>
+            <% end %>
+            </ul>
+         </div>
+      <% end %>
+
+      <div class="form-floating">
+         <%= form.text_field :product_id, placeholder: "", class: "form-control" %>
+         <%= form.label :product_id %>
+      </div>
+
+      <div class="form-floating">
+         <%= form.text_field :cart, placeholder: "", class: "form-control" %>
+         <%= form.label :cart %>
+      </div>
+
+      <div class="actions">
+         <%= form.submit %>
+      </div>
+   <% end %>
+</div>

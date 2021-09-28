@@ -1,0 +1,14 @@
+<h2 class="h3 mb-3 fw-normal">Line Items</h2>
+<%= link_to 'New Line Item', new_line_item_path, class: "btn btn-primary" %>
+
+<div class='justify-content-center mx-0'>
+   <% @line_items.each do |line_item| %>
+      <div class="my-4 mx-3 px-0 custom-card">
+         <p><%= line_item.product_id %></p>
+         <%= line_item.cart %>
+         <%= link_to 'Show', line_item, class: "btn btn-outline-primary" %>
+         <%= link_to 'Edit', edit_line_item_path(line_item), class: "btn btn-primary" %>
+         <%= link_to 'Destroy', line_item, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger" } %>
+      </div>
+   <% end %>
+</div>
