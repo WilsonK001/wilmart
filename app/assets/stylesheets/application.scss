@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 
 // Following styles are added in addition with bootstrap css styling for better aesthetics
@@ -211,6 +212,76 @@ header{
 		width: 100%;
 	}
 }
+
+.share-btn-container {
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+  .share-btn-container a i {
+	font-size: 32px;
+  }
+  
+  .share-btn-container a {
+	margin: 12px 0;
+	transition: 500ms;
+  }
+  
+  .share-btn-container a:hover {
+	transform: scale(1.2);
+  }
+  
+  .share-btn-container .fa-facebook {
+	color: #3b5998;
+  }
+  
+  .share-btn-container .fa-twitter {
+	color: #1da1f2;
+  }
+  
+  .share-btn-container .fa-linkedin {
+	color: #0077b5;
+  }
+  
+  .share-btn-container .fa-github {
+	  color: black;
+  }
+  
+  
+footer {
+		size: .5px;
+		align-content: right;
+	}
+	.fa {
+		padding: 5px;
+		font-size: 10px;
+		width: 30px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 2px;
+	}
+	.fa:hover{
+		opacity: 0.7;
+	}
+	.fa-linkedin {
+		background: #007bb5;
+		color: white;
+	}
+	.fa-github {
+		background: black;
+		color: white;
+	}
+
+	.card-header {
+		font-weight: bold;
+	} 
+  
 
 
 // // Custom bootstrap variables must be set or imported *before* bootstrap.
