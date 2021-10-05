@@ -23,7 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
+gem 'aws-sdk-s3', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -66,6 +67,8 @@ gem 'pay', '~> 2.0'
 
 # To use Stripe, also include:
 gem 'stripe', '< 6.0', '>= 2.8'
+
+gem 'sprockets'
 
 # group :assets do
 #   gem 'coffee-rails'
