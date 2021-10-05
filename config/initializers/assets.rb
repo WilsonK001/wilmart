@@ -14,4 +14,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 # config/initializers/assets.rb
-Rails.application.config.assets.precompile << /\.(?:png|jpg|jpeg|gif)\z/
+# Rails.application.config.assets.precompile << /\.(?:png|jpg|jpeg|gif)\z/
+Rails.application.config.assets.precompile << ["*.svg", "*.eot", "*.woff", "*.ttf"]
+
