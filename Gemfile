@@ -67,6 +67,8 @@ gem 'pay', '~> 2.0'
 # To use Stripe, also include:
 gem 'stripe', '< 6.0', '>= 2.8'
 
+gem "aws-sdk-s3", require: false
+
 gem 'dotenv-rails', groups: [:development, :test, :production]
 
 # group :assets do
