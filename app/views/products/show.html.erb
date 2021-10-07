@@ -15,14 +15,19 @@
       <div class="col-md-4 ms-auto">
          <div class="product-page-card">
             <div class="product-page-card-item">
-               Price: <strong>$<%= @product.price %></strong>
+               Price: <strong>$<%= @product.price_to_show %></strong>
             </div>
             <div class="product-page-card-item">
                Category: <strong><%= @product.category %></strong>
             </div>
             <% if @product.rating %>
             <div class="product-page-card-item">
-               Rating: <strong><%= @product.rating %></strong>
+               Rating:
+               <div> 
+                  <% @product.rating.times do |_| %>
+                     <i class="fa fa-star fa-lg"></i>
+                  <% end %>
+               </div>
             </div>
             <% end %>
             <p class="product-page-title">Description</p>

@@ -5,6 +5,7 @@ class Product < ApplicationRecord
     has_one_attached :image
     has_many :ratings
 
-
-
+    def price_to_show 
+        "%.2f" % price
+    end
 end
